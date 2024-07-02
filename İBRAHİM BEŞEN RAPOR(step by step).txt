@@ -1,0 +1,167 @@
+1.ADIM: Collections kütüphanesini kullanarak işlenmiş verilerimde en çok kullanılan 20 kelimeyi buldum. 
+
+
+2.ADIM: Bu 20 kelimenin her birine benzer 5 kelime bulmak için algoritma eğitmem gerekti (Word2Vec,FastText). İkisini de denedim başarılı olan Word2Vec oldu.
+
+3.ADIM: Eğittiğim algoritmayı çalıştırdığımda bazı kelimeleri index olarak atadı. İşlenmiş verilerimden indexlerini bularak tekar düzenledim.(en fazla kullanılan 20 kelime ve 5 benzer kelime isimli dosyada düzenlenmiş halini bulabilirsiniz.)
+
+1657    örneklem
+5408    kzıgın
+10257	memur
+9084	sıklığındaki
+7725    aile
+10406	sayı
+8691	kültür
+2010	bulgularımızdan
+10666	öğrencilerin
+10467	grubu
+8359	beslenme
+1397	metaanalizin 
+9288	nedenle
+11800	gösterildiği
+5910    x
+1101    geni
+2117	çizelge 
+9184	zordur
+4433    erkek
+4629	okulda
+670	ortalama
+3942	kilo
+8304	olduğu
+868	mide 
+2116	sınıflandırmadaki
+5066	n 
+1479	tablo
+8777	araştırmanın 
+1792	psikolojik
+556	macaristanda
+5259	baba
+11246	modaliteler
+7422	olmasının
+11902	zayıf
+10166	sayı
+10705	kahramanmaraş
+10032	doğmuştur
+6696	diyetlerin
+8424	ağırlığında
+6098	yaşadığı
+6051	olduğu
+5350	ay
+5879	tablo
+9035	araştırmalarda
+11627	tablo
+1261	beslenme
+4681	çocukluk
+
+4.ADIM: Benzer kelimeleri bulmak için kullandığım algoritmayı benzer cümleleri bulmak için kullandığımda işe yaramadı. Bu yüzden benzer cümleler için farklı bir algoritma eğittim.(Doc2Vec)
+
+5.ADIM: Benzer Cümleleri bulmak için eğittiğim algoritmaya farklı 5 cümle verdim. Algoritma bana benzer cümleleri index şeklinde geri döndürdü. Tekrar işlenmiş verilerime girerek karşılık gelen index değerlerini buldum ve cümle olarak tekrar düzenledim.(5 farklı cümle ve benzer cümleleri isimli dosyada bulabilirsiniz.) 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cümle 1 : 4588	
+diyet ana ara öğünlerden oluşmalıdır büyük bir öğün yerine sık küçük öğünler tercih edilmelidir
+
+Algoritmanın verdiği benzer cümlelerin indexleri:
+- 4588
+- 9812
+- 5846
+- 3508
+
+Algoritmanın verdiği benzer cümlelerin indexlerine karşılık gelen değerler.
+
+- diyet ana ara öğünlerden oluşmalıdır büyük bir öğün yerine sık küçük öğünler tercih edilmelidir
+
+- öğün aralarında atıştırma alışkanlığı
+
+- sık sık öğün atlayan
+
+- ara öğün tüketmeyen
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cümle 2 : 4593	
+mutlaka egzersizle beraber yapılmalıdır egzersiz programının kişiye göre düzenlenmesi gereklidir
+
+Algoritmanın verdiği benzer cümlelerin indexleri:
+- 4925
+- 10889
+- 4880
+- 4976
+
+Algoritmanın verdiği benzer cümlelerin indexlerine karşılık gelen değerler:
+
+- obezitenin önlenmesinde amaç sağlıklı yaşam biçiminin oluşturulması çocuğun yaşa cinsiyete göre normal kilosunun korunması obezite riski bulunan çocukların belirlenmesi
+
+- yetişkinlerde çocuklarda sedanter yaşam şekli artmış bilgisayar televizyon başında geçirilen süredeki artış beraber bedensel aktivitedeki azalma beslenme alışkanlığındaki    değişiklikler sonucunda çocuk adölesanlarda şişmanlık prevalansı artmıştır birçok gelişmiş ülkede çocukluk döneminde kilolu olma durumu şişmanlık epidemik
+düzeye ulaşmıştır
+
+- obezite tedavisinde kullanılan yöntemler davranış değişikliği tedavisi diyet tedavisi
+
+- kilo kaybı kontrolü konusunda çocuk aile teşvik edilmeli sağlıklı yaşam şekli gerekli değişimler hususunda aile çocuk desteklenmelidir kilo kaybını engelleyici durumlar hakkında konuşulmalı çözüm önerileri birlikte alınmalıdır
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Cümle 3 : 6800	
+ilkokul çağı çocuklarının sağlığı konusunda dikkat edilmesi gereken husus beslenme beslenme alışkanlığıdır çocukların beslenme alışkanlığı kazanmasında aile faktörü önemlidir et yumurta süt baklagil tahıl sebze meyve sağlıklı besinleri dengeli bir şekilde yemeyi çocuklara alışkanlık haline getirmek gerekmektedir
+
+Algoritmanın verdiği benzer cümlelerin indexleri:
+- 6800
+- 6872
+- 4799
+- 10802
+
+Algoritmanın verdiği benzer cümlelerin indexlerine karşılık gelen değerler:
+
+- ilkokul çağı çocuklarının sağlığı konusunda dikkat edilmesi gereken husus beslenme beslenme alışkanlığıdır çocukların beslenme alışkanlığı kazanmasında aile faktörü önemlidir et yumurta süt baklagil tahıl sebze meyve sağlıklı besinleri dengeli bir şekilde yemeyi çocuklara alışkanlık haline getirmek gerekmektedir
+
+-  okul hemşireleri sağlıklı davranışları teşvik etmek okul çağındaki çocukların sağlıklarını korumak iyileştirmek hizmetlere uygun erişim elde etmelerine yardımcı olmak özellikle anahtar konumdadır albashtawy ark tucker lanninghamfoster profesyonel okul hemşirelerinin rolleri sorumlulukları küresel obezite salgını nedeniyle sağlıklı bir kiloyu korumaya vurgu yaparak sağlığı geliştirme alanına giderek fazla kaymaktadır
+
+- özellikle okul çağında kilonun kontrol altına alınması büyük önem kazanmaktadır
+
+- dengeli beslenme prensibine uygun olmaması nedeniyle okul çevresinde yiyecek içecek satışı yapılan yerlerin yiyecek içeriklerinin sıkı denetimleri yapılarak evde tür yiyeceklerin yerine çocukların sebze meyve süt yoğurt ayran yiyecek içeceklere yönlendirilmeleri sağlanmalıdır
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cümle 4 : 4499	
+ancak obez çocukların çoğunda şişmanlığa olacak herhangi hormonal bozukluk saptanmaz
+
+Algoritmanın verdiği benzer cümlelerin indexleri:
+- 4499
+- 6830
+- 8205
+- 7696
+
+Algoritmanın verdiği benzer cümlelerin indexlerine karşılık gelen değerler:
+
+- ancak obez çocukların çoğunda şişmanlığa olacak herhangi hormonal bozukluk saptanmaz
+
+- obezitesi olan çocukların yetişkin olarak obez kalma olasılığı yüksektir
+
+- harcanandan fazla enerji alımında birçok faktörün etkisi vardır şişmanlığın oluşumuna kalıtsal çevresel faktörler arasındaki etkileşimin olduğu düşünülmektedir
+
+- çocuklar ucuz farmakolojik olmayan bir yöntemdir fiziksel aktivitedeki artış çocukların doğru metabolizma hızını korumalarına yardımcı olurken iştahlarını kontrol etmesine psikolojik olarak iyilik halini güçlendirmektedir
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Cümle 5 : 1153	
+obezite vergileri çocuk obezitesinin önlenmesinde yardımcı bir uygulama olmaktan öteye gidememiştir durum obezite vergilerinin dezavantajları kapsamlı şekilde değerlendirildiğinde çocuk obezitesinin önlenmesinde vergiler yerine farklı politikaların tercih edilmesi gerektiği sonucuna varılmıştır obezite mücadelede kamu politikalarının etkinliğine ilişkin araştırmalar çocuk obezitesinin önlenmesinde fiziksel aktiviteyi arttırmaya yönelik girişimlerin beslenme dengesine yönelik girişimlere kıyasla etkili sonuçlar verdiğini göstermektedir
+
+Algoritmanın verdiği benzer cümlelerin indexleri:
+- 1153
+- 6276
+- 7063
+- 1145
+
+Algoritmanın verdiği benzer cümlelerin indexlerine karşılık gelen değerler:
+
+- obezite vergileri çocuk obezitesinin önlenmesinde yardımcı bir uygulama olmaktan öteye gidememiştir durum obezite vergilerinin dezavantajları kapsamlı şekilde değerlendirildiğinde çocuk obezitesinin önlenmesinde vergiler yerine farklı politikaların tercih edilmesi gerektiği sonucuna varılmıştır obezite mücadelede kamu politikalarının etkinliğine ilişkin araştırmalar çocuk obezitesinin önlenmesinde fiziksel aktiviteyi arttırmaya yönelik girişimlerin beslenme dengesine yönelik girişimlere kıyasla etkili sonuçlar verdiğini göstermektedir
+
+- obezitenin erken tespiti önlem alınması obeziteyle mücadelede büyük önem taşımaktadır
+
+- çocukluk dönemi obezitesine olan faktörlerin bilinmesi obezite mücadele önlenmesi açısından oldukça önemlidir
+
+- literatürde obezite vergilerinin çocuk obezitesi üzerindeki sonuçlarının değerlendirildiği çalışma sayısı yetişkin obezitesi üzerindeki sonuçların değerlendirildiği çalışmalara kıyasla oldukça azdır ilgili konuyu ele alan çalışmalar bir ülke örneği sınırlı kalmıştır mevcut çalışmalar obezite vergilerinin tek başına obezite prevalanslarını azaltmada yeterli olmayacağını ancak vergilerin diğer obezite mücadele girişimlerinin yanında tercih edilebilecek yardımcı uygulamalar olduğunu göstermektedir çalışma obezite vergilerinin çocuk obezite prevalanslarında meydana getirdiği değişimleri farklı bölgelerdeki ülke örnekleri üzerinden değerlendirmeyi amaçlamaktadır.
+
+
